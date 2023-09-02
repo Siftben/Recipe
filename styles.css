@@ -71,7 +71,6 @@ html {
     transform: translateY(100px);
     will-change: opacity;
     display: none;
-    z-index: +1;
   }
 
   .trigger-enter .dropdown {
@@ -94,7 +93,6 @@ html {
     display: flex;
     justify-content: center;
     opacity:0;
-    z-index: +1;
   }
 
   .dropdownBackground.open {
@@ -131,7 +129,7 @@ html {
     padding: 30px 64px 64px 64px;
 
     
-    background-image: url("Picture/recipebgcut.png");
+    background-image: url("Picture/recipebgcut2.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 800px;
@@ -178,7 +176,6 @@ html {
   }
 
   .footer{
-    
     text-align: center;
     color: white;
     padding: 16px;

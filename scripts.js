@@ -1,6 +1,7 @@
 const triggers = document.querySelectorAll('.cool > a');
 const background = document.querySelector('.dropdownBackground');
 const nav = document.querySelector('.cool');
+let dropdown;
 
   function handleEnter() {
     this.classList.add('trigger-enter');
@@ -11,7 +12,9 @@ const nav = document.querySelector('.cool');
     }, 150);
     background.classList.add('open');
 
-    const dropdown = this.querySelector('.dropdown');
+    dropdown = this.querySelector('.dropdown');
+    dropdown.style.zIndex = '+1';
+    background.style.zIndex = '+1';
 
     const dropdownCoords = dropdown.getBoundingClientRect();
     const navCoords = nav.getBoundingClientRect();
@@ -30,8 +33,11 @@ const nav = document.querySelector('.cool');
 
   function handleLeave() {
     this.classList.remove('trigger-enter', 'trigger-enter-active');
-    setTimeout(() => this.classList.remove('trigger-enter-active'), 150);
+    //setTimeout(() => this.classList.remove('trigger-enter-active'), 150);
     background.classList.remove('open');
+    dropdown.style.zIndex = '-1';
+    background.style.zIndex = '-1';
+    
   }
 
   triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
