@@ -176,3 +176,11 @@ html {
     justify-content: center;
     gap: 10px;
   }
+
+  .footer{
+    
+    text-align: center;
+    color: white;
+    padding: 16px;
+    margin: 48px;
+  }
